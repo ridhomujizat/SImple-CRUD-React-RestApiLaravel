@@ -23,7 +23,7 @@ const ProdukForm = () => {
         nama_produk: dataProduk.nama_produk,
         keterangan: dataProduk.keterangan,
         jumlah: dataProduk.jumlah,
-        harga: dataProduk.jumlah,
+        harga: dataProduk.harga,
       });
       setProdukList({ ...produkList, statusForm: "edit" });
     }
