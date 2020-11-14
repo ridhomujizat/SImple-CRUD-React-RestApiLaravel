@@ -9,7 +9,7 @@ const Tabel = () => {
   useEffect(() => {
     if (produkList.lists === null) {
       axios
-        .get(`http://127.0.0.1:8000/api/products`, {
+        .get(`https://dry-beach-47108.herokuapp.com/api/products`, {
           method: "get",
         })
         .then((res) => {
@@ -50,7 +50,7 @@ const Tabel = () => {
     let newLists = produkList.lists.filter((el) => el.id !== idProduk);
 
     axios
-      .delete(`http://127.0.0.1:8000/api/product/${idProduk}`)
+      .delete(`https://dry-beach-47108.herokuapp.com/api/product/${idProduk}`)
       .then((res) => {
         console.log(res);
         alert("Data Berhasil Dihapus");

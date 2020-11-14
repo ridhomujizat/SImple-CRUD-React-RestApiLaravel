@@ -63,7 +63,7 @@ const ProdukForm = () => {
 
     if (produkList.statusForm === "create") {
       axios
-        .post(`http://127.0.0.1:8000/api/product`, {
+        .post(`https://dry-beach-47108.herokuapp.com/api/product`, {
           nama_produk: input.nama_produk,
           keterangan: input.keterangan,
           jumlah: input.jumlah,
@@ -89,7 +89,7 @@ const ProdukForm = () => {
     } else if (produkList.statusForm === "edit") {
       axios
         .put(
-          `http://127.0.0.1:8000/api/product/${produkList.selectedId}`,
+          `https://dry-beach-47108.herokuapp.com/api/product/${produkList.selectedId}`,
           input
         )
         .then(() => {
